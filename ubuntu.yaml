@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu
+  labels:
+    app: ubuntu
+spec:
+  containers:
+  - image: ubuntu
+    command:
+      - "sleep"
+      - "86400" # Changing sleep duration to 86400 seconds (1 day)
+    imagePullPolicy: IfNotPresent
+    name: ubuntu
+  restartPolicy: Always
