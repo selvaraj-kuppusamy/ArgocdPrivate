@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ubuntu
 spec:
-  replicas: 2  # Change the number of replicas here
+  replicas: 4  # Change the number of replicas here
   selector:
     matchLabels:
       app: ubuntu
