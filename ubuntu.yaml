@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu
+spec:
+  replicas: 4  # Change the number of replicas here
+  selector:
+    matchLabels:
+      app: ubuntu
+  template:
+    metadata:
+      labels:
+        app: ubuntu
+    spec:
+      containers:
+      - image: ubuntu
+        command:
+          - "sleep"
+          - "86400"  # Changing sleep duration to 86400 seconds (1 day)
+        imagePullPolicy: IfNotPresent
+        name: ubuntu
+      restartPolicy: Always
